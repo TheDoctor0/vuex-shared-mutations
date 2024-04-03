@@ -1,14 +1,17 @@
 # vuex-shared-mutations
 
-Share certain [Vuex](http://vuex.vuejs.org/) mutations across multiple tabs/windows. [![NPM version](https://img.shields.io/npm/v/vuex-shared-mutations.svg?style=flat-square)](https://www.npmjs.com/package/vuex-shared-mutations) [![Build Status](https://img.shields.io/travis/xanf/vuex-shared-mutations.svg?style=flat-square)](https://travis-ci.org/xanf/vuex-shared-mutations) [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=eDZyK0F0MlE1RzJuRHJHYVZLYWJIZ0JWdnNxdDM0M256dm1DMVBSVUd5bz0tLUhYN3FteXkvaDROSmtSbmZZREFiYnc9PQ==--9fd2deea21df436f47ded98bcd65032e88012900)](https://www.browserstack.com/automate/public-build/eDZyK0F0MlE1RzJuRHJHYVZLYWJIZ0JWdnNxdDM0M256dm1DMVBSVUd5bz0tLUhYN3FteXkvaDROSmtSbmZZREFiYnc9PQ==--9fd2deea21df436f47ded98bcd65032e88012900)
+[![NPM version](https://img.shields.io/npm/v/@thedoctor0/vuex-shared-mutations.svg?style=flat-square)](https://www.npmjs.com/package/@thedoctor0/vuex-shared-mutations) 
 
-- [Basic example](https://qk441m1kmq.codesandbox.io/)
-- [Nuxt example](https://98qn583znp.sse.codesandbox.io/)
+Share certain [Vuex](http://vuex.vuejs.org/) mutations across multiple tabs/windows.
+
+- [Basic example](https://qk441m1kmq.csb.app/)
 
 ## Installation
 
 ```bash
-$ npm install vuex-shared-mutations
+npm install @thedoctor0/vuex-shared-mutations
+yarn add @thedoctor0/vuex-shared-mutations
+bun install @thedoctor0/vuex-shared-mutations
 ```
 
 ## Usage
@@ -78,19 +81,4 @@ const store = new Vuex.Store({
 ```
 
 Options accepted by `BroadcastStrategy`: - `key: string` - channel name, using for sharing
-
 Options accepted by `LocalStorageStrategy`: - `key: string` - key, used in localStorage (default: 'vuex-shared-mutations') - `maxMessageLength: number` - In some browsers (hello, Internet Explorer), when you're setting big payload on localStorage, "storage" event is not triggered. This strategy bypasses it by splitting message in chunk. If you do not need to support old browsers, you can increase this number (default: 4096)
-
-## Contributing
-
-- Fork
-- `> git clone`
-- `> npm install`
-- Make your changes
-- `> npm run test` (assuming you have Chrome installed in your system)
-- `> npm run lint`
-- If everything is passing: - Update CHANGELOG.md - Commit and Make a pull request
-
-## License
-
-MIT © [Illya Klymov](https://github.com/xanf)
